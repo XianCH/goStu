@@ -1,21 +1,21 @@
 // tcp/client/main.go
 
-// ¿Í»§¶Ë
+
 func main() {
 	conn, err := net.Dial("tcp", "127.0.0.1:20000")
 	if err != nil {
 			fmt.Println("err :", err)
 			return
 	}
-	defer conn.Close() // ¹Ø±ÕÁ¬½Ó
+	defer conn.Close() // ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½
 	inputReader := bufio.NewReader(os.Stdin)
 	for {
-			input, _ := inputReader.ReadString('\n') // ¶ÁÈ¡ÓÃ»§ÊäÈë
+			input, _ := inputReader.ReadString('\n') // ï¿½ï¿½È¡ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
 			inputInfo := strings.Trim(input, "\r\n")
-			if strings.ToUpper(inputInfo) == "Q" { // Èç¹ûÊäÈëq¾ÍÍË³ö
+			if strings.ToUpper(inputInfo) == "Q" { // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½qï¿½ï¿½ï¿½Ë³ï¿½
 					return
 			}
-			_, err = conn.Write([]byte(inputInfo)) // ·¢ËÍÊý¾Ý
+			_, err = conn.Write([]byte(inputInfo)) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			if err != nil {
 					return
 			}
