@@ -11,13 +11,11 @@ func main() {
 
 	s := &http.Server{
 		Addr: "127.0.0.1:8000",
-		Handler: ,
+		Handler: fooHandler(),
 	}
 }
 
-func sayHello()  {
-	fmt.Println("hello")	
-}
+
 
 func fooHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(r.RemoteAddr, "成功连接")
