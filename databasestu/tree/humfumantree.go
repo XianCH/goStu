@@ -1,4 +1,4 @@
-package main
+package tree
 
 import (
 	"container/heap"
@@ -69,6 +69,7 @@ func printHuffmanCodes(node *HuffmanNode, code string) {
 	}
 }
 
+/*
 func main() {
 	text := "hello huffman"
 	freqMap := make(map[rune]int)
@@ -80,3 +81,4 @@ func main() {
 	printHuffmanCodes(root, "")
 
 }
+*/
