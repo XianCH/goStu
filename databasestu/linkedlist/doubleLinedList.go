@@ -36,6 +36,7 @@ func (dll *DoublyLinkedList) Display() {
 	fmt.Println()
 }
 
+
 func main() {
 	dll := DoublyLinkedList{}
 

@@ -18,7 +18,7 @@ func main() {
 		{"user1",10},
 		{"user2",20},
 	}
-
 	fmt.Println(arr0, arr1, arr2, str)
 	fmt.Println(a, b, c, d)
+	
 }

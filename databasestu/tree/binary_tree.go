@@ -82,8 +82,29 @@ func (bt *binaryTree) InOrderTraversal(root *node) {
 // 后序遍历
 func (bt *binaryTree) PostOrderTraversal(root *node) {
 	if root != nil {
-		bt.PostOrderTraversal(root.RightChild)
 		bt.PostOrderTraversal(root.LeftChild)
+		bt.PostOrderTraversal(root.RightChild)
 		fmt.Printf("%d", root.key)
 	}
 }
+
+/*
+func main() {
+	arrs := []int{4, 2, 5, 3, 1, 6}
+	bt := binaryTree{}
+	for _, arr := range arrs {
+		bt.insert(arr)
+	}
+
+	//前序遍历
+	bt.PerOrderTraversal(bt.root)
+	fmt.Println()
+	//中序遍历
+	bt.InOrderTraversal(bt.root)
+	fmt.Println()
+	//后序遍历
+	bt.PostOrderTraversal(bt.root)
+	fmt.Println()
+}
+
+*/
