@@ -69,16 +69,14 @@ func printHuffmanCodes(node *HuffmanNode, code string) {
 	}
 }
 
-/*
-func main() {
-	text := "hello huffman"
-	freqMap := make(map[rune]int)
-	for _, char := range text {
-		freqMap[char]++
-	}
+// func main() {
+// 	text := "hello huffman"
+// 	freqMap := make(map[rune]int)
+// 	for _, char := range text {
+// 		freqMap[char]++
+// 	}
 
-	root := buildHuffmanTree(freqMap)
-	printHuffmanCodes(root, "")
+// 	root := buildHuffmanTree(freqMap)
+// 	printHuffmanCodes(root, "")
 
-}
-*/
+// }
