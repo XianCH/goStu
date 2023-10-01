@@ -1,4 +1,3 @@
-// tcp/client/main.go
 package main
 
 import (

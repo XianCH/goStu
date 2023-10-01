@@ -6,6 +6,10 @@ import (
 	"net"
 )
 
+// 处理函数// tcp/server/main.go
+
+// TCP server端
+
 // 处理函数
 func process(conn net.Conn) {
 	defer conn.Close() // 关闭连接

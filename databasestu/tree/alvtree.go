@@ -13,7 +13,7 @@ type TreeNode struct {
 }
 
 // AVLTree 表示 AVL 树的根节点。
-type AVLTree struct {
+type AVLTree Struct {
 	Root *TreeNode
 }
 

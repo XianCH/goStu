@@ -24,7 +24,7 @@ var Db *sqlx.DB
 
 func init() {
 
-	database, err := sqlx.Open("mysql", "root:3953@tcp(192.168.164.101:3306)/go_test")
+	database, err := sqlx.Open("mysql", "root:3953@tcp(127.0.0.1:3306)/go_test")
 	if err != nil {
 		fmt.Println("open mysql failed,", err)
 		return
