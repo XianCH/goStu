@@ -1,46 +1,49 @@
 package main
 
 import (
-	"fmt"
+	"sync"
 )
 
-type Queue struct {
+type Queen struct {
+	Size  int
 	items []interface{}
+	mutex sync.Mutex
 }
 
-func (q *Queue) Enqueue(item interface{}) {
-	q.items = append(q.items, item)
+func (queen *Queen) SetMaxSize(size int) {
+	queen.Size = size
 }
 
-func (q *Queue) Dequeue() interface{} {
-	if q.IsEmpty() {
-		return nil
+func (queen *Queen) IsFull() bool {
+	return len(queen.items) == queen.Size
+}
+
+func (queen *Queen) EnQueen(item interface{}) {
+	queen.mutex.Lock()
+	defer queen.mutex.Unlock()
+	if !queen.IsFull() {
+		queen.items = append(queen.items, item)
 	}
-	item := q.items[0]
-	q.items = q.items[1:]
-	return item
 }
 
-func (q *Queue) Front() interface{} {
-	if q.IsEmpty() {
-		return nil
-	}
-	return q.items[0]
+func (queen *Queen) Fornt() interface{} {
+	return queen.items[0]
 }
 
-func (q *Queue) IsEmpty() bool {
-	return len(q.items) == 0
+func (queen *Queen) IsEmpty() bool {
+	return len(queen.items) == 0
 }
 
 func main() {
-	queue := Queue{}
 
-	queue.Enqueue(1)
-	queue.Enqueue(2)
-	queue.Enqueue(3)
-
-	fmt.Println("Queue:")
-	for !queue.IsEmpty() {
-		fmt.Println(queue.Dequeue())
+	queen := &Queen{
+		Size:  20,
+		items: []interface{}{},
 	}
+
+	go func() {
+		for i := 0; i < 20; i++ {
+
+		}
+	}()
 }
