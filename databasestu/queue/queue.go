@@ -37,8 +37,7 @@ func (queen *Queen) IsEmpty() bool {
 func main() {
 
 	queen := &Queen{
-		Size:  20,
-		items: []interface{}{},
+		Size: 20,
 	}
 
 	go func() {
