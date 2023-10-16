@@ -11,15 +11,15 @@ type ServerRequest struct {
 }
 
 type ServerResponse struct {
-	Code string      `json:"code"`
-	Data interface{} `json:"data"`
-	Msg  string      `json:"msg"`
+	Code string
+	Data interface{}
+	Msg  string
 }
 
 type User struct {
-	ID    int    `json:"id"`
-	Name  string `json:"name"`
-	Email string `json:"email"`
+	ID    int
+	Name  string
+	Email string
 }
 
 func JsonHandler(w http.ResponseWriter, r *http.Request) {
