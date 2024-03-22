@@ -62,7 +62,8 @@ func Demo_01() {
 	var wg sync.WaitGroup
 	ch := make(chan int)
 	logchan := make(chan string)
-
+	defer close(logchan)
+	defer close(ch)
 	deadline := time.Now().Add(time.Second * 10)
 	ctx, cancel := context.WithDeadline(context.Background(), deadline)
 	defer cancel()
