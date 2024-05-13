@@ -112,7 +112,6 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 			}(header)
 		}
 	}
-
 	wg.Wait()
 	fmt.Fprintln(w, "Upload completed")
 }
